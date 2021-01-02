@@ -46,7 +46,7 @@ const w = 'technology, computers, IT, Code, Bootstrap, weapons, tears, apple'
 console.log(w.split(','))*/
 
 /*************************************************************/
-
+/*
 // ARRAYS - variables that holds multiple values
 
 const numbers = new Array(1, 6, 9, 3, 11, 522, 52); //Constructor Array
@@ -62,3 +62,40 @@ fruits.pop(); //Pop Removes the last entry of the Array
 console.log(fruits);
 console.log(Array.isArray(fruits)); // isArray checks to see if it True
 console.log(fruits.indexOf('oranges'));
+*/
+
+/*************************************************************/
+// OBJECT LITERALS - Key Value Pairs
+
+const person = {
+    firstName: 'Peter',
+    lastName: 'Jackson',
+    age: 44,
+    hobbies: ['music', 'movies', 'sports'],
+    address: {
+        street: 'Main Street',
+        number: 50,
+        city: 'Boston',
+        state: 'limpopo'
+
+    }
+}
+console.log(person);
+console.log(person.firstName, person.lastName);
+console.log(person.address.city);
+
+person.email = 'john@gmail.com';
+// Destructuring
+
+const { firstName, lastName, age, hobbies, address: { city } } = person;
+console.log(firstName, age);
+console.log(city);
+
+/*************************************************************/
+
+// OBJECT ARRAYS 
+
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
