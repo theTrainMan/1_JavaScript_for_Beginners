@@ -95,6 +95,29 @@ console.log(city);
 
 // OBJECT ARRAYS 
 
+// These are an Array with 3 values and objects inside
+const todo = [{
+        id: 1,
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2,
+        text: 'Do the laundry',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Go buy some groceries',
+        isCompleted: true
+    }
+]
+console.log(todo);
+console.log(todo[1]);
+console.log(todo[1].text);
+
+
+
 
 /*************************************************************/
 /*************************************************************/
