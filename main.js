@@ -189,12 +189,25 @@ if (x > 5 && y > 10) {
     console.log('x is more than 5 AND y is more than 10');
 }
 
-// Ternary operator - short hand if statement
-const v = 15;
-const color = v > 10 ? 'red' : 'blue'
+// Ternary operator - ? and else : - short hand if statement
+const v = 1;
+const color = v > 10 ? 'red' : 'white'
 
 console.log(color);
 
+// Switches
+switch (color) {
+    case 'red':
+        console.log('The color is red');
+        break;
+    case 'blue':
+        console.log('The color is blue');
+        break;
+    default:
+        console.log('Color is neither color');
+
+        break;
+}
 
 /************************************************************/
 /************************************************************/
