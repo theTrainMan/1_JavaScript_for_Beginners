@@ -246,12 +246,21 @@ function Person(firstName, lastName, dob) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.dob = new Date(dob);
-    this.getBirthYear = function() { //Adding this function to the Constructor function
+    /*this.getBirthYear = function() { //Adding this function to the Constructor function
         return this.dob.getFullYear();
-    }
+    }  //replaced by the Prototype below
     this.getFullName = function() {
         return `${this.firstName} ${this.lastName}`;
     }
+    */
+}
+
+// How not include the functions inside the Constructor is to use prototype
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear(); // This prototype can replace the function in the constructor
+}
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`; // This prototype can replace the function in the constructor
 }
 
 //Instantiate an Object
@@ -270,11 +279,16 @@ console.log(person2.getBirthYear());
 console.log(person1.getFullName());
 console.log(person2.getFullName());
 
+console.log(person1);
 
-
-
-
-
+// Object orientated Programming with ES5
 /************************************************************/
+
+// PROTOTYPES - another object but can attach methods and properties to the prototype.... 
+
+
+
+
+
 /************************************************************/
 /************************************************************/
