@@ -171,12 +171,28 @@ const todoCompletedAdd = todos.filter(function(todo) {
 })
 console.log(todoCompletedAdd);
 */
-// Conditionals 
-
 
 
 /*************************************************************/
+// Conditionals Statements
+// Use === as it matches the type exactly.
+
+const x = 6;
+const y = 12;
+
+// OR - ||
+if (x > 5 || y > 10) {
+    console.log('x is more than 5 OR y is more than 10');
+}
+// AND - &&
+if (x > 5 && y > 10) {
+    console.log('x is more than 5 AND y is more than 10');
+}
 
 
 
+/************************************************************/
+/************************************************************/
+/************************************************************/
+/************************************************************/
 /************************************************************/
