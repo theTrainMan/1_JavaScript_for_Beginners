@@ -176,7 +176,7 @@ console.log(todoCompletedAdd);
 /*************************************************************/
 // Conditionals Statements
 // Use === as it matches the type exactly.
-
+/*
 const x = 6;
 const y = 12;
 
@@ -208,8 +208,35 @@ switch (color) {
 
         break;
 }
-
+*/
 /************************************************************/
+
+// FUNCTIONS
+function addNums(num1, num2) {
+    console.log(num1 + num2);
+
+}
+addNums(5, 4)
+
+function addNums(num1, num2) {
+    return num1 + num2;
+}
+console.log(addNums(5, 40));
+
+//Arrow Functions
+const addNumsArr = (num1, num2) => {
+    return num1 + num2;
+}
+console.log(addNumsArr(105, 40));
+
+//Arrow Function shorten
+const AddNumsArrShrt = (num1, num2) => console.log(num1 + num2);
+AddNumsArrShrt(19, 1)
+
+const AddNumsArrShrt1 = (num1, num2) => (num1 + num2);
+console.log(AddNumsArrShrt1(50, 50));
+
+
 /************************************************************/
 /************************************************************/
 /************************************************************/
