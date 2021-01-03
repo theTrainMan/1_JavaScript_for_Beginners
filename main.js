@@ -116,6 +116,10 @@ console.log(todo);
 console.log(todo[1]);
 console.log(todo[1].text);
 
+const todoJSON = JSON.stringify(todo); //changing the format to a JSON file
+console.log(todoJSON);
+
+
 
 
 
