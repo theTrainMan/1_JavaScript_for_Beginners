@@ -66,7 +66,7 @@ console.log(fruits.indexOf('oranges'));
 
 /*************************************************************/
 // OBJECT LITERALS - Key Value Pairs
-
+/*
 const person = {
     firstName: 'Peter',
     lastName: 'Jackson',
@@ -94,7 +94,7 @@ console.log(city);
 /*************************************************************/
 
 // OBJECT ARRAYS 
-
+/*
 // These are an Array with 3 values and objects inside
 const todos = [{
         id: 1,
@@ -104,7 +104,7 @@ const todos = [{
     {
         id: 2,
         text: 'Do the laundry',
-        isCompleted: true
+        isCompleted: false
     },
     {
         id: 3,
@@ -120,7 +120,7 @@ const todoJSON = JSON.stringify(todos); //changing the format to a JSON file
 console.log(todoJSON);
 
 /*************************************************************/
-
+/*
 // LOOPS - For
 for (let i = 0; i <= 10; i++) {
     console.log(`For Loop Number: ${i}`);
@@ -144,6 +144,36 @@ for (let i = 0; i < todos.length; i++) {
 for (let todo of todos) {
     console.log(todo.isCompleted);
 }
+
+// Higher order Array Methods - ForEach[Loops through the Array], Map[Creates a new Array from an Array] & filter[Creates a new array based on a condition]
+// forEach
+todos.forEach(function(todo) {
+    console.log(todo.text);
+})
+
+//Map
+const todoText = todos.map(function(todo) {
+    return todo.text;
+})
+console.log(todoText);
+
+// filter
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+})
+console.log(todoCompleted);
+
+// Adding multiple queries - Functional Programming
+const todoCompletedAdd = todos.filter(function(todo) {
+    return todo.isCompleted === false;
+}).map(function(todo) {
+    return todo.text;
+})
+console.log(todoCompletedAdd);
+*/
+// Conditionals 
+
+
 
 /*************************************************************/
 
