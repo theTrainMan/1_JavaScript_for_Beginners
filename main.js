@@ -210,7 +210,7 @@ switch (color) {
 }
 */
 /************************************************************/
-
+/*
 // FUNCTIONS
 function addNums(num1, num2) {
     console.log(num1 + num2);
@@ -236,8 +236,45 @@ AddNumsArrShrt(19, 1)
 const AddNumsArrShrt1 = (num1, num2) => (num1 + num2);
 console.log(AddNumsArrShrt1(50, 50));
 
-
+*/
 /************************************************************/
+
+// Object oriented Programming
+//Constructor functions [with prototypes or ES6 classes]
+
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    this.getBirthYear = function() { //Adding this function to the Constructor function
+        return this.dob.getFullYear();
+    }
+    this.getFullName = function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+//Instantiate an Object
+const person1 = new Person('John', 'Tracey', '4-3-2002');
+const person2 = new Person('Mary', 'Hendrix', '12-1-1972');
+
+console.log(person1);
+console.log(person2);
+console.log(person1.lastName);
+console.log(person1.dob.getFullYear());
+
+//Adding a method to the function
+console.log(person1.getBirthYear());
+console.log(person2.getBirthYear());
+
+console.log(person1.getFullName());
+console.log(person2.getFullName());
+
+
+
+
+
+
 /************************************************************/
 /************************************************************/
 /************************************************************/
