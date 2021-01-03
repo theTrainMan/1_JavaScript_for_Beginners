@@ -96,7 +96,7 @@ console.log(city);
 // OBJECT ARRAYS 
 
 // These are an Array with 3 values and objects inside
-const todo = [{
+const todos = [{
         id: 1,
         text: 'Take out trash',
         isCompleted: true
@@ -112,17 +112,41 @@ const todo = [{
         isCompleted: true
     }
 ]
-console.log(todo);
-console.log(todo[1]);
-console.log(todo[1].text);
+console.log(todos);
+console.log(todos[1]);
+console.log(todos[1].text);
 
-const todoJSON = JSON.stringify(todo); //changing the format to a JSON file
+const todoJSON = JSON.stringify(todos); //changing the format to a JSON file
 console.log(todoJSON);
 
+/*************************************************************/
 
+// LOOPS - For
+for (let i = 0; i <= 10; i++) {
+    console.log(`For Loop Number: ${i}`);
+}
 
+// LOOPS - While
+let i = 0;
+while (i < 3) {
+    console.log(i);
+    i++;
+}
 
+// Loop through an Array
+for (let i = 0; i < todos.length; i++) {
+    console.log(`For Loop Number: ${i}`);
+}
+for (let i = 0; i < todos.length; i++) {
+    console.log(todos[i].text);
+}
+
+for (let todo of todos) {
+    console.log(todo.isCompleted);
+}
 
 /*************************************************************/
-/*************************************************************/
-/*************************************************************/
+
+
+
+/************************************************************/
