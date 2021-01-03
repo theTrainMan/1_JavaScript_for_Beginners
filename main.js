@@ -241,7 +241,7 @@ console.log(AddNumsArrShrt1(50, 50));
 
 // Object oriented Programming
 //Constructor functions [with prototypes or ES6 classes]
-
+/*
 function Person(firstName, lastName, dob) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -253,7 +253,9 @@ function Person(firstName, lastName, dob) {
         return `${this.firstName} ${this.lastName}`;
     }
     */
-}
+
+
+/*
 // PROTOTYPES - another object but can attach methods and properties to the prototype.... 
 // How not include the functions inside the Constructor is to use prototype
 Person.prototype.getBirthYear = function() {
@@ -262,7 +264,8 @@ Person.prototype.getBirthYear = function() {
 Person.prototype.getFullName = function() {
     return `${this.firstName} ${this.lastName}`; // This prototype can replace the function in the constructor
 }
-
+*/
+/*
 // CLASS
 class NewPerson {
     constructor() { // Method inside a Class
@@ -277,8 +280,7 @@ class NewPerson {
         return `${this.firstName} ${this.lastName}`;
     }
 }
-// the classes gives same information as the constructor functions
-
+// the classes gives same information as the constructor function
 
 
 //Instantiate an Object
@@ -300,15 +302,101 @@ console.log(person2.getFullName());
 console.log(person1);
 
 // Object orientated Programming with ES5
+*/
+
+/************************************************************/
+/*
+// DOM - Document Object
+//console.log(window);
+
+// Single Element Selectors
+const form = document.getElementById('my-form');
+console.log(form);
+
+console.log(document.querySelector('.container'));
+console.log(document.querySelector('.h1'));
+console.log(document.querySelector('.btn'));
+
+
+// Multiple Element Selectors
+console.log(document.querySelectorAll('.item'));
+//console.log(document.getElementByClassNAme('item')); older no more in use
+//console.log(document.getElementByTagName('li')); // older no more in use
+
+
+const items = document.querySelectorAll('.item');
+
+items.forEach((item) => console.log(item)); //Looping through to get back all the items in the list.
+*/
+
+// MAnipulating the DOM 
+/*
+const ul = document.querySelector('.items');
+//ul.remove();
+//ul.lastElementChild.remove();
+ul.firstElementChild.textContent = ('Hello')
+ul.children[1].innerText = 'Brad';
+ul.lastElementChild.innerHTML = '<h1>Why me?</h1>'
+
+const btn = document.querySelector('.btn');
+btn.style.background = 'blue';
+btn.addEventListener('click', (e) => { // Adding an Event
+    e.preventDefault();
+    console.log(e.target);
+});
+
+const btn1 = document.querySelector('.btn1');
+btn1.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#my-form').style.background = '#ccc';
+    //document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items').lastElementChild.innerHTML = '<h1> And Again Why me?</h1>';
+})
+
+// Using other events other than click, you can use mousehover, mouseover, it depends on the site and what you want to accomplish.
+const btn2 = document.querySelector('.btn2');
+btn2.addEventListener('click', (e) => {
+
+})*/
+const btn1 = document.querySelector('.btn1')
+btn1.remove();
+const btn2 = document.querySelector('.btn2')
+btn2.remove();
+
+/************************************************************/
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
+
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
+    e.preventDefault();
+    //console.log(nameInput.value);
+    if (nameInput.value === '' || emailInput.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter all fields';
+
+        setTimeout(() => msg.remove(), 3000);
+    } else {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+
+        userList.appendChild(li);
+
+        //clear the fields
+        nameInput.value = '';
+        emailInput.value = '';
+
+    }
+
+}
+
+
 
 
 /************************************************************/
 
-
-
-
-
-
-
-/************************************************************/
 /************************************************************/
